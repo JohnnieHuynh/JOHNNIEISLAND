@@ -7,7 +7,10 @@
 	<title> Dun Dunn Dunn! </title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<!-- Add Icon Library -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -15,27 +18,9 @@
 	<!-- Start Of Container -->
 	<div class="container">
 
-	<!-- Navigation Bar -->
-	<header>
-		<nav class="nav_links">
-			<ul>
-				<li></li>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-
 	<!-- Intro Title Page -->
 	<div class="splash" id="home">
 	<section class="intro" id="home">
-		<div class="content">
-		<h1 class="section__title section__title--intro">
-			Johnnie
-		</h1>
-		</div>
 
 		<nav class="nav_enter">
 			<p>
@@ -47,16 +32,48 @@
 	</section>
 	</div>
 
+	<!-- Navigation Bar -->
+	<!--
+	<div class="nav_sticky_header">
+		<nav class="nav_links">
+			<ul>
+
+				<li><a href="#home" class="menuItem">Home</a></li>
+				<li><a href="#about" class="menuItem">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+	-->
+
+	<!-- Test Nav Bar-->
+	<div class="nav_sticky_header" id="nav_sticky_header">
+		<nav class="nav_links">
+			<ul>
+				<!-- (Insert Logo) -->
+				<li><a href="#home" class="menuItem">Home</a></li>
+				<li><a href="#about" class="menuItem">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+
 	<!-- About Me -->
 	<section class="aboutme" id="about">
-		<h2 class="aboutSubtitle">About</h2>
-		<div class="aboutRow">
-			<div class="profilePicture">
-				<img src="stick.jpg">
-			</div>
-			<div class="aboutText">
-			<span>Johnny here! velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper quis lectus.  Oh and I like vinyls.
-			</span>
+		<div class="aboutCard">
+			<div class="row">
+				<div class="aboutInfo">
+					<h2 class="text-center">Johnny Huynh</h2>
+					<p>Hola! I develop mobile apps for fun!</p>
+					<p>This area is under construction!</p>
+				</div>
+				<div class="aboutImg">
+					<div class="img-wrap">
+						<img src="img/JP.jpg">
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -73,43 +90,59 @@
 	<!-- Projects -->
 	<section class="projectpage" id="projects">
 		<div class="projectDiv">
-		<h2 style="text-align:center">Recent Projects</h2>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-      <div class="container">
-        <h2>PokeShop</h2>
-        <p>Full-Stack Website</p>
-        <p><button class="button">More</button></p>
-      </div>
-    </div>
-  </div>
+			<div class="row">
 
-  <div class="column">
-    <div class="card">
-      <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
-      <div class="container">
-        <h2>EventSplit</h2>
-        <p>Android</p>
-        <p><button class="button">More</button></p>
-      </div>
-    </div>
-  </div>
+				<div class="card">
+					<img src="img/largerShot.png">
+					<div class="info">
+						<h3>Poker Chess</h3>
+						<p>A iOS game that combines poker and chess!</p>
+						<p><button id="modalBtn1" class="btn">Learn More</button></p>
+					</div>
+				</div>
 
-  <div class="column">
-    <div class="card">
-      <img src="/w3images/team3.jpg" alt="John" style="width:100%">
-      <div class="container">
-        <h2>Poker Chess</h2>
-        <p>iOS</p>
-        <p><button class="button">More</button></p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+				<div class="card">
+					<!--Placeholder IMG-SRC "https://mrreiha.keybase.pub/codepen/hover-fx/news1.jpg"-->
+					<img src="img/MangaWebsite.jpg">
+					<div class="info">
+						<h3>All Things Manga</h3>
+						<p>Full Stack Website for purchasing Manga</p>
+						<p><button id="modalBtn2" class="btn">Learn More</button></p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="info">
+						<h3>Grade Checker</h3>
+						<p>Android app that acts like a gradebook!</p>
+						<p><p><button id="modalBtn3" class="btn">Learn More</button></p></p>
+					</div>
+				</div>
+
+			</div>
+		</div>
 	</section>
+
+	<!-- Modal for Projects -->
+	<div id="projectModal" class="modal">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<span class="closeBtn">&times;</span>
+				<h2 id="modal-title">Title</h2>
+			</div>
+
+			<div class="modal-body">
+				<p id="modal-body-info">Hello I am a placeholder</p>
+			</div>
+
+			<hr>
+
+			<div class="modal-footer">
+				<h3 id="modal-footer-title">Footer</h3>
+			</div>
+		</div>
+	</div>
 
 	<!-- Placeholder Title Page -->
 	<div class="pimg3">
@@ -125,8 +158,17 @@
 	</section>
 
 	<!-- Contact -->
-	<section class="contactme" id="contact">
-		<h2>Contact Me!</h2>
+	<section class="social-menu">
+		<div class="social-menu-content">
+			Connect
+			<ul>
+				<li><i class="fa fa-github-square"></i></li>
+				<li><i class="fa fa-linkedin"></i></li>
+				<li><i class="fa fa-envelope"></i></li>
+				<li><i class="fa fa-file"></i></li>
+			</ul>
+			<small>&copy; 2020 | J. Huynh </small>
+		</div>
 	</section>
 
 	<!-- End of Container -->
@@ -135,7 +177,7 @@
 	<!-- Scripts -->
 	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="main.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 </html>
